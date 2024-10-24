@@ -1,0 +1,36 @@
+#Definere funksjon
+def convert_signs(numbers):
+    result = []
+    for num in numbers:
+        if num > 0:
+            result.append("pos")
+        elif num < 0:
+            result.append("neg")
+        else:
+            result.append("zero")
+    return result
+
+# Eksempel:
+numbers = [1, -20, 0, 8, -4]
+print(convert_signs(numbers))  # Resultat: ['pos', 'neg', 'zero', 'pos', 'neg']
+
+# Returns length of string
+def findLen(str):
+    counter = 0
+    while str[counter:]:
+        counter += 1
+    return counter
+ 
+str = "geeks"
+print(findLen(str))
+
+def has_length_five(strings):
+    for s in strings:
+        if len(s) == 5:
+            return True
+    return False
+
+# Example
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 19, 21]
+filtered_numbers = [num for num in numbers if num > 10 and num < 20]
+print(filtered_numbers)  # Output: [11, 12, 14, 19]
